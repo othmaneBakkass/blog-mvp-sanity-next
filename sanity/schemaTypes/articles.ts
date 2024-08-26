@@ -122,14 +122,36 @@ export const ArticlesSchema = defineType({
 			description: "the date this article is posted",
 		}),
 		defineField({
-			name: "authors",
-			title: "Authors",
-			type: "reference",
-			to: [
+			name: "categories",
+			title: "Categories",
+			type: "array",
+			of: [
 				{
-					type: "authors",
+					type: "reference",
+					to: [
+						{
+							type: "categories",
+						},
+					],
 				},
 			],
+			validation: (rules) => rules.required(),
+		}),
+		defineField({
+			name: "authors",
+			title: "Authors",
+			type: "array",
+			of: [
+				{
+					type: "reference",
+					to: [
+						{
+							type: "authors",
+						},
+					],
+				},
+			],
+			validation: (rules) => rules.required(),
 		}),
 	],
 });
