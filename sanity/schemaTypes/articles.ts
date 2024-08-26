@@ -121,5 +121,15 @@ export const ArticlesSchema = defineType({
 			type: "date",
 			description: "the date this article is posted",
 		}),
+		defineField({
+			name: "authors",
+			title: "Authors",
+			type: "reference",
+			to: [
+				{
+					type: "authors",
+				},
+			],
+		}),
 	],
 });
