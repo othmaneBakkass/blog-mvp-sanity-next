@@ -11,12 +11,17 @@
   "dependencies": {
     "@sanity/image-url": "1",
     "@sanity/vision": "3",
+    "@t3-oss/env-nextjs": "^0.11.0",
+    "jiti": "^1.21.6",
     "next": "14.2.6",
     "next-sanity": "9",
     "react": "^18",
     "react-dom": "^18",
+    "react-player": "^2.16.0",
+    "react-tweet": "^3.2.1",
     "sanity": "3",
-    "styled-components": "6"
+    "styled-components": "6",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/node": "^20",
